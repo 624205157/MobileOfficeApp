@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.CopyActivity">
+
+    <include layout="@layout/titlebar" />
+    <EditText
+        android:id="@+id/send_host_editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:hint="发件服务器地址"
+        android:maxLines="1"
+        android:text="" />
+    <EditText
+        android:id="@+id/send_port_editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:hint="发件服务器端口"
+        android:maxLines="1"
+        android:text="" />
+    <EditText
+        android:id="@+id/imap_host_editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:hint="收件服务器地址"
+        android:maxLines="1"
+        android:text="" />
+    <EditText
+        android:id="@+id/imap_port_editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:hint="收件服务器端口"
+        android:maxLines="1"
+        android:text="" />
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_60"
+        android:text="保存" />
+</LinearLayout>

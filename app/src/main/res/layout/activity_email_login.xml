@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:ignore="MissingDefaultResource">
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/space_200"
+            android:layout_height="@dimen/space_200"
+            android:layout_margin="@dimen/space_40"
+            android:src="@mipmap/ic_logo" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <EditText
+                android:id="@+id/emailAddress"
+                style="@style/login_field"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:hint="@string/emailaddress"
+                android:imeOptions="actionGo"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/clear_address"
+                style="@style/input_del"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="10.0dip"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/login_field"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="@string/emailpassword"
+                android:imeOptions="actionGo"
+                android:inputType="textPassword"
+                android:paddingBottom="4.0dip"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/clear_password"
+                style="@style/input_del"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="10.0dip"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <CheckBox
+                android:id="@+id/remenberPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remenberPassword" />
+
+            <CheckBox
+                android:id="@+id/autoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dip"
+                android:visibility="gone"
+                android:text="@string/autoLogin" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="46.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/btn_bg_share"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="@string/emaillogin" />
+    </LinearLayout>
+
+</LinearLayout>

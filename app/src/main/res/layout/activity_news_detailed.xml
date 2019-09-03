@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".ui.activity.CopyActivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/main_color"
+        android:visibility="gone"
+        app:bar_style="transparent"
+        app:icon_back="false"
+        app:layout_collapseMode="pin"
+        app:title="新闻中心" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/main_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:src="@mipmap/back_detailed" />
+
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Title_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="新闻中心"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="省政府召开党组（扩大）会议"
+                    android:textColor="#cd0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/title_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:text="促进人工智能与经济社会融合发展坚定不移推动全方位对外开放合作"
+                    android:textColor="#1f1f1f"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title_bot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="景俊海主持"
+                    android:textColor="#cd0000"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="15dp"
+            android:paddingRight="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/news_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="2019-02-01"
+                    android:textColor="#6b6b6b"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="来源："
+                    android:textColor="#6b6b6b"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/news_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="吉林省政府网"
+                    android:textColor="#6b6b6b"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/news_img"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="340dp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/banner_img" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="25dp"-->
+            <!--android:lineSpacingExtra="6dp"-->
+
+            <!--android:text="\u3000\u30004月9日，公安部经侦局政委高峰、督察局办公室主任邱军等一行4人来我省检查督导全国公安机关“三侦会”精神贯彻落实情况，副省长、公安厅长黄关春亲切会见公安部督导组。副厅长任剑波，厅指挥中心（办公室）指挥长（主任）吴跃岩，经侦总队总队长贾树城、政委刘惠明，警务督察总队总队长林海峰等参加会见。"-->
+            <!--android:textColor="#1f1f1f"-->
+            <!--android:textSize="17sp" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="25dp"-->
+            <!--android:lineSpacingExtra="6dp"-->
+            <!--android:text="\u3000\u3000高峰政委介绍了全国各地“三侦会”精神落实情况，对我厅三任主要领导高度重视和有力推动经侦工作，积极贯彻落实“三侦会”确定的有关工作任务给予充分肯定，并对继续推进经侦部门归口管理资金查控和落实经侦专项编制等工作提出具体意见。"-->
+            <!--android:textColor="#1f1f1f"-->
+            <!--android:textSize="17sp" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="25dp"-->
+            <!--android:lineSpacingExtra="6dp"-->
+            <!--android:text="\u3000\u3000高峰政委介绍了全国各地“三侦会”精神落实情况，对我厅三任主要领导高度重视和有力推动经侦工作，积极贯彻落实“三侦会”确定的有关工作任务给予充分肯定，并对继续推进经侦部门归口管理资金查控和落实经侦专项编制等工作提出具体意见。"-->
+            <!--android:textColor="#1f1f1f"-->
+            <!--android:textSize="17sp" />-->
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/mWebConetent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:ignore="WebViewLayout">
+
+        </WebView>
+    </LinearLayout>
+    <!--</ScrollView>-->
+
+
+</LinearLayout>

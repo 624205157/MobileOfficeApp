@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.MainFragmentA">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_test_bar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@mipmap/bg_launcher"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/tb_test_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:bar_style="transparent"
+            app:icon_back="false"
+            app:layout_collapseMode="pin"
+            app:title="消息">
+
+        </com.hjq.bar.TitleBar>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="此页面正在维护中"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_60"
+            android:layout_marginRight="@dimen/space_60"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

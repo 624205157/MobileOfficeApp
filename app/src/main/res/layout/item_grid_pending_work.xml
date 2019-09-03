@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/dgz_img" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:text="公文标题XXXX " />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="right|center"
+                android:orientation="vertical">
+
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:id="@+id/ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_borderColor="@color/resume_type_FFC446"
+                    app:srb_fillColor="@color/resume_type_FFC446"
+                    app:srb_isIndicator="true"
+                    app:srb_numberOfStars="5"
+                    app:srb_pressedBorderColor="@color/resume_type_FFC446"
+                    app:srb_pressedFillColor="@color/resume_type_FFC446"
+                    app:srb_rating="3"
+                    app:srb_starBorderWidth="3"
+                    app:srb_starSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_store_addcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="重要紧急:一级"
+                    android:textColor="@color/main_color" />
+                　
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="发起人：张朝阳" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="时间：2018-12-12"
+                 />
+
+            <TextView
+                android:id="@+id/tv_dsp"
+                style="@style/tv_house_title"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="待审批"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:src="@mipmap/ico_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

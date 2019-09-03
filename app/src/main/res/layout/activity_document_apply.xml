@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.CopyActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_photo"
+                style="@style/rl_formation_Style"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="公文照片" />
+
+                <ImageView
+                    android:id="@+id/img_photo2"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="right|center"
+                    android:src="@mipmap/fqgw_photo2"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="right|center"
+                    android:src="@mipmap/fqgw_photo2" />
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_img_ext"
+
+                    android:text="更多" />
+
+                <ImageView
+                    android:id="@+id/add_ext"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+
+                    android:src="@mipmap/ic_img_ext" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                style="@style/rl_formation_Style"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+                        android:text="标题" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_doc_title"
+                    style="@style/tv_house_title"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入标题"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                style="@style/rl_formation_Style"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_house_title"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="所属部门" />
+
+                <TextView
+                    android:id="@+id/tv_doc_department"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:hint=""
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/cut_line"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="文件信息" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_doc_type"
+                style="@style/rl_formation_Style"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_house_title"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="发文类型" />
+
+                <TextView
+                    android:id="@+id/tv_doc_type"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:hint="请选择发文类型"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_house_title"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="发文份数" />
+
+                <EditText
+                    android:id="@+id/et_doc_count"
+                    style="@style/tv_house_title"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入发文份数"
+                    android:inputType="number"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_doc_secretrank"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_house_title"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="秘密等级" />
+
+                <TextView
+                    android:id="@+id/tv_doc_secretrank"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:hint="请选择秘密等级"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_doc_EmergencyLevel"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_house_title"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="紧急程度" />
+
+                <TextView
+                    android:id="@+id/tv_doc_EmergencyLevel"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:hint="请选择紧急程度"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_doc_module"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+
+                        android:text="公文模式" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doc_module"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:hint="请选择公文模式"
+                    android:text="审批" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_doc_approver_title"
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+                        android:text="审批人" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doc_approver"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:hint=""
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_signer"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_signer"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_doc_signer"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+                        android:text="会签人" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doc_signer"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_signer2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_signer2"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+                        android:text="会签人" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doc_signer2"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_signer3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_signer3"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+                        android:text="会签人" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doc_signer3"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_signer4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_signer4"
+                style="@style/rl_formation_Style"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center"
+                        android:text="会签人" />
+
+                    <TextView
+                        style="@style/tv_house_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doc_signer4"
+                    style="@style/tv_house_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/ico_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cut_line" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_bg_share"
+                android:gravity="center"
+                android:text="提交申请"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

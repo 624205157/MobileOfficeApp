@@ -1,0 +1,841 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:calendarview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:background="@color/main_color"-->
+    <!--android:gravity="left|center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingTop="15dp">-->
+
+    <!--</LinearLayout>-->
+
+    <!--<com.hjq.bar.TitleBar-->
+    <!--android:id="@+id/tb_test_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?android:attr/actionBarSize"-->
+    <!--android:background="@color/main_color"-->
+    <!--android:visibility="gone"-->
+    <!--app:bar_style="transparent"-->
+    <!--app:icon_back="false"-->
+    <!--app:icon_left="@mipmap/back"-->
+    <!--app:layout_collapseMode="pin"-->
+    <!--app:title="我的" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="4"-->
+    <!--android:background="@mipmap/left_bg"-->
+    <!--android:orientation="vertical">-->
+    <!---->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_username"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="黄有龙"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="20sp" />-->
+    <!---->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_rc"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--android:drawableTop="@mipmap/rili_default"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:text="我的日程"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="18sp" />-->
+    <!---->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawableTop="@mipmap/youxiang_selected"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:text="邮箱"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="18sp"-->
+    <!--android:visibility="visible" />-->
+    <!---->
+    <!---->
+    <!--</LinearLayout>-->
+
+    <!-- 邮箱-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_mailbox_main"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:paddingBottom="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="我的邮箱"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/class_id_01"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:tag="01">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_main_add"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawableLeft="@mipmap/sp_icon"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:text="新增邮件"-->
+    <!--android:textColor="@color/colorButtonPressed"-->
+    <!--android:textSize="18sp" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_collect"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:background="@drawable/selector_white_normal"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:src="@mipmap/icon_shoujianxiang" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:text="收件箱"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_count"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:text="3"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginRight="14dp"-->
+    <!--android:padding="2dp"-->
+    <!--android:src="@mipmap/ico_arrow" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:background="@color/cut_line" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_send"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+
+    <!--android:background="@drawable/selector_white_normal"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:src="@mipmap/icon_fajianxiang" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:text="发件箱"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="14dp"-->
+    <!--android:padding="2dp"-->
+    <!--android:src="@mipmap/ico_arrow" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:background="@color/cut_line" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_drafts"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:background="@drawable/selector_white_normal"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:src="@mipmap/icon_caogaoxiang" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:text="草稿箱"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="14dp"-->
+    <!--android:padding="2dp"-->
+    <!--android:src="@mipmap/ico_arrow" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--android:background="@color/cut_line" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!-- 邮箱发送邮箱-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_mailbox_send"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:paddingBottom="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_create_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_weight="1"-->
+    <!--android:drawableLeft="@mipmap/icon_mail_cancel"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:text="新建邮箱"-->
+    <!--android:textSize="18sp" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_send"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawableLeft="@mipmap/icon_fasonl"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:text="发送"-->
+    <!--android:textColor="@color/colorButtonPressed"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:background="@drawable/notice_title"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:text="收件人:"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_mailbox_consignee"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="left|center"-->
+    <!--android:hint="请输入收件人"-->
+    <!--android:text=""-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_contacts"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:src="@mipmap/icon_choose" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:background="@drawable/notice_title"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:text="主题:"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_mailbox_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="left|center"-->
+    <!--android:hint="请输入主题"-->
+    <!--android:text=""-->
+    <!--android:textSize="18sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:background="@drawable/notice_title"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingTop="10dp">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="12dp"-->
+
+    <!--android:text="内容:"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_mailbox_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="top"-->
+    <!--android:hint="请输入内容"-->
+    <!--android:text=""-->
+    <!--android:textSize="18sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    <!-- 邮箱收件箱列表-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_mailbox_recevice_main"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_receive_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:drawableLeft="@mipmap/icon_mail_cancel"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:gravity="left|center"-->
+    <!--android:text="收件箱"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_receive_add"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:drawableLeft="@mipmap/sp_icon"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:gravity="left|center"-->
+    <!--android:text="新增邮件"-->
+    <!--android:textColor="@color/colorButtonPressed"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rv_recevice_mRecyclerView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--</LinearLayout>-->
+    <!-- 邮箱发件箱列表-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_mailbox_sendlist"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_sendlist_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+
+    <!--android:drawableLeft="@mipmap/icon_mail_cancel"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:gravity="left|center"-->
+    <!--android:text="发件箱"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_sendlist_add"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:drawableLeft="@mipmap/sp_icon"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:gravity="left|center"-->
+    <!--android:text="新增邮件"-->
+    <!--android:textColor="@color/colorButtonPressed"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rv_sendlist_mRecyclerView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--</LinearLayout>-->
+    <!-- 邮箱草稿箱列表-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_mailbox_drafts"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_drafts_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:drawableLeft="@mipmap/icon_mail_cancel"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:gravity="left|center"-->
+    <!--android:text="草稿箱"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_mailbox_drafts_add"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:drawableLeft="@mipmap/sp_icon"-->
+    <!--android:drawablePadding="10dp"-->
+    <!--android:gravity="left|center"-->
+    <!--android:text="新增邮件"-->
+    <!--android:textColor="@color/colorButtonPressed"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rv_drafts_mRecyclerView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--</LinearLayout>-->
+    <!-- 日程-->
+    <LinearLayout
+        android:id="@+id/ll_rc_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_rc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/lastMonth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/icon_left_selected" />
+
+            <ImageView
+                android:id="@+id/nextMonth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/icon_right_selected" />
+
+        </LinearLayout>
+
+        <com.othershe.calendarview.weiget.WeekView
+            android:id="@+id/weekView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:week_size="22" />
+
+        <com.othershe.calendarview.weiget.CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            calendarview:choose_type="single"
+            calendarview:solar_size="22" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_rc_mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/mTimeLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <!-- 添加日程-->
+    <LinearLayout
+        android:id="@+id/ll_rc_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left|center"
+            android:text="新建日程"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_reject"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/notice_title"
+            android:gravity="left|top"
+            android:hint="请输入日程内容"
+            android:padding="10dp"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/notice_title"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="开始时间"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="请选择开始时间"
+                android:text=""
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/notice_title"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="结束时间"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="请选择结束时间"
+                android:text=""
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/class_id_11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@color/blue_trans"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:tag="01">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@mipmap/icon_agreed"
+                    android:drawablePadding="10dp"
+                    android:text="添加"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_id_22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@color/red_trans"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:tag="02">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@mipmap/icon_no"
+                    android:drawablePadding="10dp"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--</LinearLayout>-->

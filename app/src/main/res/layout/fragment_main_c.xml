@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.MainFragmentB">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/main_color"
+        app:bar_style="transparent"
+        app:icon_back="true"
+        app:layout_collapseMode="pin"
+        app:title="首页" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/class_id_01"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="01">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="新闻列表"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line_wating01"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/main_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/class_id_02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="01">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="通知公告"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line_wating02"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/main_color"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </FrameLayout>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        app:tl_indicator_color="@color/main_color"
+        app:tl_indicator_corner_radius="1.5dp"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="120dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/main_color"
+        app:tl_textUnselectColor="#333333"
+        app:tl_textsize="16sp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>
